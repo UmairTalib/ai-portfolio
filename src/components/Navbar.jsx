@@ -20,7 +20,7 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, scrolled }) => {
                             <Brain className="w-8 h-8 text-teal-400 relative z-10 group-hover:text-white transition-colors" />
                             <div className="absolute inset-0 bg-teal-500/50 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
-                        <span className="font-mono bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent glitch-hover">Dev.AI_</span>
+                        <span className="font-mono bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent glitch-hover">Umair Talib</span>
                     </a>
 
                     {/* Desktop Nav */}
@@ -42,6 +42,7 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, scrolled }) => {
                     <button
                         className="md:hidden text-slate-300 hover:text-white"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                     >
                         {isMenuOpen ? <X /> : <Menu />}
                     </button>
