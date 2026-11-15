@@ -1,22 +1,22 @@
 import React from 'react';
-import { AudioLines, FileText, HeartPulse, Telescope, ArrowUpRight } from 'lucide-react';
+import { Landmark, FileText, HeartPulse, Telescope, ArrowUpRight } from 'lucide-react';
 import TiltCard from './TiltCard';
 
-// Project texts follow the CV (November 2026). Numbers come from the
-// published paper, the research project report and the course project report.
+// Project texts follow the CV (November 2026). Numbers come from the CV,
+// the published paper, the research project report and the course project report.
 const projects = [
     {
-        title: 'Listening Beyond the Words',
-        kind: "Master's thesis, in progress",
-        desc: 'A counterfactual training objective for LoRA fine-tuning of an audio LLM (Voxtral Mini 3B), so that the model has to use the voice and not only the words. The pilot protocol was fixed before the first run; no results yet.',
-        tags: ['PyTorch', 'Audio LLM', 'LoRA'],
-        icon: AudioLines,
-        links: [{ label: 'Repository', href: 'https://github.com/UmairTalib/listening-beyond-the-words' }],
+        title: 'AI platform for public-funding workflows',
+        kind: 'Part-time job at ATTEC, code is private',
+        desc: 'Aims to automate public-funding workflows for German SMEs and the funding experts who advise them. The first stage already works: it shows which programmes fit a company, with every checked condition and its official source. Code makes the decisions; the LLM must cite the words it used, and code verifies them. On three evaluation sets used for tuning (113 cases, no unseen data), it gave 0 invented or wrong answers.',
+        tags: ['Python', 'FastAPI', 'LLM API'],
+        icon: Landmark,
+        links: [],
     },
     {
         title: 'Leakage-resilient diarization for clinical interviews',
-        kind: 'Paper at CoDIT 2026, published by IEEE',
-        desc: 'The paper describes a speaker-verified diarization and transcription pipeline with a text filter for interviewer prompts, which I built with my co-author. Interviewer contamination in participant transcripts fell from 14.18% to 1.09%.',
+        kind: 'Co-authored paper, CoDIT 2026, published by IEEE',
+        desc: 'The paper describes the speaker-verified diarization and transcription pipeline from my research project, with a text filter for interviewer prompts. Interviewer contamination in participant transcripts fell from 14.18% to 1.09%.',
         tags: ['pyannote.audio', 'Faster-Whisper', 'SLURM'],
         icon: FileText,
         links: [{ label: 'Paper (DOI)', href: 'https://doi.org/10.1109/CoDIT70676.2026.11630977' }],

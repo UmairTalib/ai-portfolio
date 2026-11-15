@@ -3,12 +3,11 @@ import { Github, Linkedin, Mail, Brain, AudioLines, ChevronDown } from 'lucide-r
 import NeuralBackground from './NeuralBackground';
 import Typewriter from './Typewriter';
 
-// The three versions of each participant's speech in the master's thesis
-// (see https://github.com/UmairTalib/listening-beyond-the-words).
-const thesisViews = [
-    { id: 'x0', name: 'original', content: 'words and voice' },
-    { id: 'x1', name: 're-voiced', content: 'same words, neutral voice' },
-    { id: 'x2', name: 'low-pass', content: 'mostly the voice' },
+// What I am developing now in my two part-time jobs, as on the CV
+// (November 2026). The code of both is private.
+const currentWork = [
+    { name: 'ATTEC', content: 'AI platform for public-funding workflows' },
+    { name: 'FUSION', content: 'AI planning tool for citizen participation' },
 ];
 
 // Interviewer contamination in participant transcripts, as reported in the
@@ -47,8 +46,8 @@ const Hero = () => {
 
                     <p className="text-xl text-slate-400 max-w-lg leading-relaxed">
                         LLM and speech systems <span className="text-teal-400">whose results can be checked</span>.
-                        I am an M.Sc. Computer Science student at the University of Siegen and co-author of a
-                        conference paper published by IEEE (CoDIT 2026).
+                        I'm developing AI products part-time alongside my M.Sc. in Computer Science at the
+                        University of Siegen, and I co-authored a conference paper published by IEEE (CoDIT 2026).
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
@@ -72,26 +71,24 @@ const Hero = () => {
                     {/* 3D Floating Tech Block */}
                     <div className="relative w-full aspect-square max-w-[500px] animate-[float_6s_ease-in-out_infinite]">
                         {/* Glass Terminal */}
-                        <div className="absolute inset-0 bg-[#0f1623]/80 backdrop-blur-xl border border-teal-500/20 rounded-xl p-6 shadow-2xl transform rotate-y-12 rotate-x-6 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-500">
+                        <div className="absolute inset-x-0 top-0 min-h-full bg-[#0f1623]/80 backdrop-blur-xl border border-teal-500/20 rounded-xl p-6 shadow-2xl transform rotate-y-12 rotate-x-6 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-500">
                             <div className="flex gap-2 mb-4 border-b border-slate-700/50 pb-4">
                                 <div className="w-3 h-3 rounded-full bg-red-500/80" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                                 <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                                <span className="ml-auto text-xs text-slate-500 font-mono">thesis/three_views.md</span>
+                                <span className="ml-auto text-xs text-slate-500 font-mono">now.md</span>
                             </div>
                             <div className="font-mono text-sm space-y-3">
-                                <div className="text-slate-500"># Master's thesis: one interview, three versions</div>
-                                {thesisViews.map((view) => (
-                                    <div key={view.id} className="flex gap-3">
-                                        <span className="text-purple-400">{view.id}</span>
-                                        <span className="text-blue-400 w-20 shrink-0">{view.name}</span>
-                                        <span className="text-slate-300">{view.content}</span>
+                                <div className="text-slate-500"># What I am developing now, part-time</div>
+                                {currentWork.map((item) => (
+                                    <div key={item.name} className="flex gap-3">
+                                        <span className="text-purple-400 w-16 shrink-0">{item.name}</span>
+                                        <span className="text-slate-300">{item.content}</span>
                                     </div>
                                 ))}
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-start gap-2">
                                     <span className="text-teal-400">❯</span>
-                                    <span className="text-slate-300">Pilot from November 2026</span>
-                                    <span className="text-teal-500 text-xs px-2 py-0.5 bg-teal-500/10 rounded">No results yet</span>
+                                    <span className="text-slate-300">I write the specs, AI coding agents implement, I review and test</span>
                                 </div>
                                 {/* Result from the published paper */}
                                 <div className="mt-6 p-4 bg-black/20 rounded border border-slate-700/50">

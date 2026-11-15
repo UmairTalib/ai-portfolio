@@ -11,7 +11,7 @@ const Contact = () => {
                 </div>
                 <h2 className="text-5xl font-bold text-white mb-8">Get in touch</h2>
                 <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-                    I am interested in <span className="text-teal-400 font-medium">AI engineering roles</span>, and in <span className="text-teal-400 font-medium">PhD or research positions</span> in speech and multimodal machine learning.
+                    I am happy to talk about <span className="text-teal-400 font-medium">LLM applications</span>, <span className="text-teal-400 font-medium">speech AI</span> and <span className="text-teal-400 font-medium">model evaluation</span>. The quickest way to reach me is by e-mail.
                 </p>
 
                 <a href="mailto:umair.talib99@gmail.com" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-teal-500 text-white font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(45,212,191,0.4)]">

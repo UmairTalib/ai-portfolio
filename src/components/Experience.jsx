@@ -1,14 +1,23 @@
 import React from 'react';
-import { GraduationCap, Briefcase, Microscope, Code2, Award, Brain } from 'lucide-react';
+import { GraduationCap, Briefcase, Users, Microscope, Code2, Award, Brain } from 'lucide-react';
 
-// Same entries and dates as the CV (November 2026), newest end date first.
+// Same entries and dates as the CV (November 2026); current entries first,
+// then by end date, newest first.
 const timeline = [
     {
         icon: <Briefcase className="w-5 h-5" />,
-        title: 'Part-time software development',
-        org: 'Two part-time roles alongside my studies',
-        year: '2026 – present',
-        desc: 'I develop two AI prototypes with AI coding agents, checked by automated tests. Details on request.',
+        title: 'Software Engineer, AI Product (part-time)',
+        org: 'ATTEC UG (haftungsbeschränkt), Siegen',
+        year: '06/2026 – present',
+        desc: "I'm the only developer of an AI platform that aims to automate public-funding workflows for German SMEs and the funding experts who advise them. Its first stage, finding the programmes that fit a company, already works. I write the specs, AI coding agents implement, and I review every change, backed by about 3,700 automated tests and CI.",
+        active: true,
+    },
+    {
+        icon: <Users className="w-5 h-5" />,
+        title: 'Student Research Assistant (WHB), Full-Stack Development (part-time)',
+        org: 'University of Siegen, research project FUSION',
+        year: '07/2026 – present',
+        desc: "I'm developing the FUSION toolbox, an AI-assisted planning tool for municipal citizen participation: it recommends participation formats and turns the choice into a roadmap with budget, tasks and calendar. It is built with AI coding agents in a spec, plan, build and review cycle, with about 9,000 automated tests and CI.",
         active: true,
     },
     {
@@ -16,7 +25,7 @@ const timeline = [
         title: 'M.Sc. Computer Science',
         org: 'University of Siegen',
         year: '10/2023 – present',
-        desc: "In-depth focus on Visual Computing. Master's thesis on counterfactual training for depression screening with audio LLMs (in progress).",
+        desc: 'Current average 2.1 (German scale, 1.0 is best).',
         active: true,
     },
     {
@@ -24,14 +33,14 @@ const timeline = [
         title: 'Research project (Project Work, grade 1.0)',
         org: 'University of Siegen, Chair for Embedded Systems',
         year: '04/2025 – 03/2026',
-        desc: 'Screening for elevated depressive symptoms from clinical interview recordings, with one co-author. The diarization pipeline from this project is described in our paper at CoDIT 2026, published by IEEE.',
+        desc: 'Screening for elevated depressive symptoms from clinical interview recordings, with speech and text models. A paper from this project, on its diarization pipeline, was published by IEEE (CoDIT 2026).',
         active: false,
     },
     {
         icon: <Code2 className="w-5 h-5" />,
         title: 'Software Engineer',
         org: 'ZweiDevs',
-        year: '02/2022 – 06/2023',
+        year: '02/2022 – 09/2023',
         desc: 'Built React and Next.js front ends and Node.js and Express back ends for several projects, including an EdTech platform with Stripe payments, JWT-based login and role-based access, deployed on AWS (EC2, S3).',
         active: false,
     },
