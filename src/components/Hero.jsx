@@ -1,7 +1,22 @@
 import React from 'react';
-import { Github, Linkedin, FileText, Brain, Database, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Brain, AudioLines, ChevronDown } from 'lucide-react';
 import NeuralBackground from './NeuralBackground';
 import Typewriter from './Typewriter';
+
+// What I am developing now in my two part-time jobs, as on the CV
+// (November 2026). The code of both is private.
+const currentWork = [
+    { name: 'ATTEC', content: 'AI platform for public-funding workflows' },
+    { name: 'FUSION', content: 'AI planning tool for citizen participation' },
+];
+
+// Interviewer contamination in participant transcripts, as reported in the
+// CoDIT 2026 paper (doi:10.1109/CoDIT70676.2026.11630977).
+const contamination = [
+    { label: 'raw', value: 14.18 },
+    { label: 'filtered', value: 1.09 },
+];
+const maxContamination = Math.max(...contamination.map((bar) => bar.value));
 
 const Hero = () => {
     return (
@@ -19,35 +34,36 @@ const Hero = () => {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
                         </span>
-                        Based in Germany
+                        Siegen, Germany
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
-                        <span className="block text-slate-400 text-3xl md:text-4xl mb-2 font-normal">I am a</span>
+                        <span className="block text-slate-400 text-3xl md:text-4xl mb-2 font-normal">Hi, I'm Umair Talib</span>
                         <span className="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-                            <Typewriter text="Machine Learning Engineer" delay={100} className="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent" />
+                            <Typewriter text="Applied AI Engineer" delay={100} className="bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent" />
                         </span>
                     </h1>
 
                     <p className="text-xl text-slate-400 max-w-lg leading-relaxed">
-                        M.Sc. Student architecting <span className="text-teal-400">Intelligent Systems</span>.
-                        Translating mathematical theory into scalable AI solutions.
+                        LLM and speech systems <span className="text-teal-400">whose results can be checked</span>.
+                        I'm developing AI products part-time alongside my M.Sc. in Computer Science at the
+                        University of Siegen, and I co-authored a conference paper published by IEEE (CoDIT 2026).
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
                         <a href="#projects" className="group relative px-6 py-3 bg-teal-500/10 overflow-hidden rounded-lg border border-teal-500/50 text-teal-400 font-medium transition-all hover:bg-teal-500 hover:text-white hover:scale-105 hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
-                            <span className="relative z-10">Explore Neural Nets</span>
+                            <span className="relative z-10">View projects</span>
                             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-teal-500 transition-transform duration-300 ease-out z-0" />
                         </a>
                         <a href="#contact" className="px-6 py-3 border border-slate-700 hover:border-white text-slate-400 hover:text-white rounded-lg font-medium transition-all hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                            Initialize Contact
+                            Get in touch
                         </a>
                     </div>
 
                     <div className="flex gap-6 pt-8 text-slate-500">
-                        <a href="#" className="hover:text-teal-400 hover:scale-110 transition-all"><Github className="w-6 h-6" /></a>
-                        <a href="#" className="hover:text-teal-400 hover:scale-110 transition-all"><Linkedin className="w-6 h-6" /></a>
-                        <a href="#" className="hover:text-teal-400 hover:scale-110 transition-all"><FileText className="w-6 h-6" /></a>
+                        <a href="https://github.com/UmairTalib" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-teal-400 hover:scale-110 transition-all"><Github className="w-6 h-6" /></a>
+                        <a href="https://www.linkedin.com/in/umairtalib/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-teal-400 hover:scale-110 transition-all"><Linkedin className="w-6 h-6" /></a>
+                        <a href="mailto:umair.talib99@gmail.com" aria-label="E-mail" className="hover:text-teal-400 hover:scale-110 transition-all"><Mail className="w-6 h-6" /></a>
                     </div>
                 </div>
 
@@ -55,32 +71,44 @@ const Hero = () => {
                     {/* 3D Floating Tech Block */}
                     <div className="relative w-full aspect-square max-w-[500px] animate-[float_6s_ease-in-out_infinite]">
                         {/* Glass Terminal */}
-                        <div className="absolute inset-0 bg-[#0f1623]/80 backdrop-blur-xl border border-teal-500/20 rounded-xl p-6 shadow-2xl transform rotate-y-12 rotate-x-6 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-500">
+                        <div className="absolute inset-x-0 top-0 min-h-full bg-[#0f1623]/80 backdrop-blur-xl border border-teal-500/20 rounded-xl p-6 shadow-2xl transform rotate-y-12 rotate-x-6 hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-500">
                             <div className="flex gap-2 mb-4 border-b border-slate-700/50 pb-4">
                                 <div className="w-3 h-3 rounded-full bg-red-500/80" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                                 <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                                <span className="ml-auto text-xs text-slate-500 font-mono">inference_engine.py</span>
+                                <span className="ml-auto text-xs text-slate-500 font-mono">now.md</span>
                             </div>
                             <div className="font-mono text-sm space-y-3">
-                                <div className="text-slate-500"># Loading Pre-trained Weights</div>
-                                <div><span className="text-purple-400">model</span> = <span className="text-blue-400">AutoModel</span>.from_pretrained(<span className="text-green-400">"bert-base-german"</span>)</div>
-                                <div><span className="text-purple-400">device</span> = <span className="text-yellow-200">torch.device</span>(<span className="text-green-400">"cuda"</span>)</div>
-                                <br />
-                                <div className="text-slate-500"># Processing Input Tensor</div>
-                                <div className="flex items-center gap-2">
+                                <div className="text-slate-500"># What I am developing now, part-time</div>
+                                {currentWork.map((item) => (
+                                    <div key={item.name} className="flex gap-3">
+                                        <span className="text-purple-400 w-16 shrink-0">{item.name}</span>
+                                        <span className="text-slate-300">{item.content}</span>
+                                    </div>
+                                ))}
+                                <div className="flex items-start gap-2">
                                     <span className="text-teal-400">❯</span>
-                                    <span className="text-slate-300">Optimizing gradients...</span>
-                                    <span className="text-teal-500 text-xs px-2 py-0.5 bg-teal-500/10 rounded">Done</span>
+                                    <span className="text-slate-300">I write the specs, AI coding agents implement, I review and test</span>
                                 </div>
-                                {/* Simulated Graph */}
+                                {/* Result from the published paper */}
                                 <div className="mt-6 p-4 bg-black/20 rounded border border-slate-700/50">
-                                    <div className="flex justify-between items-end h-24 gap-2">
-                                        {[40, 65, 34, 78, 56, 92, 88].map((h, i) => (
-                                            <div key={i} className="w-full bg-teal-500/20 hover:bg-teal-400 transition-colors rounded-t" style={{ height: `${h}%` }}></div>
+                                    <div className="flex justify-around items-end h-24 gap-6">
+                                        {contamination.map((bar) => (
+                                            <div key={bar.label} className="flex flex-col items-center justify-end h-full w-20">
+                                                <span className="text-xs text-teal-300 mb-1">{bar.value.toFixed(2)}%</span>
+                                                <div
+                                                    className="w-full min-h-[2px] bg-teal-500/30 hover:bg-teal-400 transition-colors rounded-t"
+                                                    style={{ height: `${(bar.value / maxContamination) * 70}%` }}
+                                                />
+                                            </div>
                                         ))}
                                     </div>
-                                    <div className="text-center text-xs text-slate-500 mt-2 font-mono">Loss Convergence</div>
+                                    <div className="flex justify-around gap-6 text-xs text-slate-500 mt-1">
+                                        {contamination.map((bar) => (
+                                            <span key={bar.label} className="w-20 text-center">{bar.label}</span>
+                                        ))}
+                                    </div>
+                                    <div className="text-center text-xs text-slate-500 mt-2">Interviewer contamination in participant transcripts (CoDIT 2026 paper)</div>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +118,7 @@ const Hero = () => {
                             <Brain className="w-8 h-8 text-teal-400" />
                         </div>
                         <div className="absolute bottom-10 -left-6 p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-xl animate-bounce delay-700">
-                            <Database className="w-8 h-8 text-blue-400" />
+                            <AudioLines className="w-8 h-8 text-blue-400" />
                         </div>
                     </div>
                 </div>

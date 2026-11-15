@@ -13,26 +13,29 @@ const About = () => {
                         <div className="space-y-4 text-slate-400 leading-relaxed text-lg">
                             <p>
                                 <span className="text-teal-400 font-mono text-xl mr-2">&gt;</span>
-                                Hallo! I am a Master's student specializing in <span className="text-white font-medium">Artificial Intelligence</span> at a leading technical university in Germany.
+                                Hello! I am an applied AI engineer and an M.Sc. Computer Science student at the <span className="text-white font-medium">University of Siegen</span>.
                             </p>
                             <p>
-                                My research interests lie at the intersection of <span className="text-teal-400">Computer Vision</span> and <span className="text-teal-400">Generative Models</span>. I build systems that can see, understand, and create.
+                                Alongside my studies, I'm developing <span className="text-teal-400">AI products</span> part-time: an AI platform for public-funding workflows at <span className="text-white font-medium">ATTEC</span>, as its only developer, and an AI-assisted planning tool for municipal citizen participation in the research project <span className="text-white font-medium">FUSION</span> at the University of Siegen.
                             </p>
                             <p>
-                                Currently, I am working on <span className="text-white underline decoration-teal-500/50 underline-offset-4">Self-Supervised Learning</span> techniques to reduce data dependency in medical imaging diagnosis.
+                                I make the design decisions and write the specs, AI coding agents implement, and I review and test every change. I care about <span className="text-white underline decoration-teal-500/50 underline-offset-4">results that can be checked</span>: code makes the decisions where it can, and a language model has to quote its evidence, which code then checks.
+                            </p>
+                            <p>
+                                Before my master's, I worked for over 1.5 years as a software engineer, building web applications with React, Next.js and Node.js. In my master's research project, I worked on screening for elevated depressive symptoms from speech and text; a paper from this project was published by IEEE (CoDIT 2026).
                             </p>
                         </div>
 
                         <div className="mt-8 grid grid-cols-2 gap-4">
                             <div className="glass-card p-6 rounded-lg hover:border-teal-500/30 transition-colors">
                                 <GraduationCap className="w-8 h-8 text-teal-400 mb-3" />
-                                <h3 className="text-white font-medium">M.Sc. AI/Data Science</h3>
-                                <p className="text-sm text-slate-500">Current Student (Germany)</p>
+                                <h3 className="text-white font-medium">M.Sc. Computer Science</h3>
+                                <p className="text-sm text-slate-500">University of Siegen</p>
                             </div>
                             <div className="glass-card p-6 rounded-lg hover:border-teal-500/30 transition-colors">
                                 <Activity className="w-8 h-8 text-teal-400 mb-3" />
-                                <h3 className="text-white font-medium">Research Focus</h3>
-                                <p className="text-sm text-slate-500">CV, NLP, & RL</p>
+                                <h3 className="text-white font-medium">Focus</h3>
+                                <p className="text-sm text-slate-500">LLM and speech systems</p>
                             </div>
                         </div>
                     </div>

@@ -1,16 +1,39 @@
-# React + Vite
+# ai-portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Source code of my personal portfolio page: a single-page site built with React 19, Vite 7 and Tailwind CSS 4.
 
-Currently, two official plugins are available:
+I am Umair Talib, an applied AI engineer and M.Sc. Computer Science student at the University of Siegen. I work on LLM and speech systems whose results can be checked. The page shows my current work, research, skills, experience and education. Everything on it matches my CV (November 2026).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What the page shows
 
-## React Compiler
+| Section | Content | File |
+| --- | --- | --- |
+| Home | Name, headline, what I am developing now and one result from my CoDIT 2026 paper | `src/components/Hero.jsx` |
+| About | Studies, current work and how I work | `src/components/About.jsx` |
+| Skills | The skill groups from my CV | `src/components/Skills.jsx` |
+| Research and Projects | AI platform at ATTEC, published paper, research project and course project | `src/components/Projects.jsx` |
+| Experience & Education | Jobs, degrees and further training, newest first | `src/components/Experience.jsx` |
+| Contact | Topics I am happy to talk about, and my e-mail address | `src/components/Contact.jsx` |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In Skills, Research and Projects, and Experience & Education, the entries are kept in a list at the top of the file, so changing an entry does not touch the layout.
 
-## Expanding the ESLint configuration
+## Related links
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Paper: U. Oleh, U. Talib, M. A. Alam and R. Obermaisser, "Leakage-Resilient Diarization and Feature Extraction Framework for Robust Multimodal Mental Health Corpora", CoDIT 2026, published by IEEE, pp. 2508–2512, [doi:10.1109/CoDIT70676.2026.11630977](https://doi.org/10.1109/CoDIT70676.2026.11630977)
+- LinkedIn: [linkedin.com/in/umairtalib](https://www.linkedin.com/in/umairtalib/)
+
+## Run it locally
+
+You need Node.js 20.19 or later (or 22.12 or later), as Vite 7 requires.
+
+```bash
+npm install      # install the dependencies
+npm run dev      # start the development server with hot reload
+npm run lint     # check the code with ESLint
+npm run build    # build the static site into dist/
+npm run preview  # serve the built site locally
+```
+
+## History
+
+The first version of this repository (December 2025) held placeholder content that did not describe me: a sample degree, a sample job and sample projects. In November 2026 I replaced it with my own content.
